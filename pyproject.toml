@@ -29,7 +29,7 @@ warn_return_any = true
 exclude = 'venv'
 
 [tool.black]
-line-lenght = 119
+line-length = 119
 exclude = '''
 (
     /(
