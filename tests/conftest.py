@@ -2,19 +2,19 @@ import pytest
 
 @pytest.fixture
 def account_number():
-    return "985632 147"
+    return "98"
 
 @pytest.fixture
 def card_number():
-    return "1456 897 546 32 14 56"
+    return "14561234 897 546 32 14 56"
 
 @pytest.fixture
 def card_number_widget():
-    return "Visa Gold 5999414228426353"
+    return "Visa 2635312365489665412365479"
 
 @pytest.fixture
 def date_info():
-    return "2024-03-11T02:26:18.671407"
+    return "12-10"
 
 @pytest.fixture
 def account_records():
