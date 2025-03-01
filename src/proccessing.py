@@ -1,8 +1,13 @@
-def filter_by_state(my_id, state="EXECUTED"):
-    """ функция возвращает словарь по ключу state"""
-    return [item for item in my_id if item.get('state') == state]
+from typing import Any, Dict, List
 
 
-def sort_by_date(data, descending=True):
-    """функция возвращает отсортированный по дате словарь"""
-    return sorted(data, key=lambda x: x['date'], reverse=descending)
+def filter_by_state(my_data: List[Dict[str, Any]], state: str = "EXECUTED") -> List[Dict[str, Any]]:
+    """Функция на входе принимает словарь аккаунтов (id) со статусами (state) и датой (date)
+    и возвращает словарь с определенным статусом, переданным в переменную state"""
+    return [item for item in my_data if item.get("state") == state]
+
+
+def sort_by_date(my_data: List[Dict[str, Any]], descending: bool = True) -> List[Dict[str, Any]]:
+    """Функция на входе принимает словарь аккаунтов (id) со статусами (state) и датой (date)
+    и возвращает отсортированный по дате словарь."""
+    return sorted(my_data, key=lambda x: x["date"], reverse=descending)
