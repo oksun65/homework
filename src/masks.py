@@ -16,9 +16,3 @@ def get_mask_account(my_account_number: str) -> str:
         raise ValueError("Номер счета неверный")
 
     return f"**{my_account_number[-4:]}"
-
-#
-# card_number = "1456 897 546 32 14 56"
-# account_number = "985632 147"
-# print(get_mask_card_number(card_number))
-# print(get_mask_account(account_number))
