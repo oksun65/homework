@@ -1,4 +1,5 @@
-from src.masks import get_mask_account, get_mask_card_number
+from .masks import get_mask_account, get_mask_card_number
+
 
 def mask_card_account(my_info: str) -> str:
     """Функция, для вывода маски номера счета или номера карты"""
@@ -18,4 +19,10 @@ def get_date(date_info: str) -> str:
     """Функция для корректного вывода даты"""
     key_date = date_info.split("T")[0]
     year, month, day = key_date.split("-")
-    return f"{day}.{month}.{year}"
+    if year >= "2026" or month >= "13" or day >= "31":
+        return "Неверные данные"
+    elif "T" not in date_info:
+        return "Ошибочные данные"
+
+    else:
+        return f"{day}.{month}.{year}"
