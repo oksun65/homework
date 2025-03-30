@@ -1,9 +1,6 @@
-import random
-
-
 def filter_by_currency(transactions, currency_name):
     for tran in transactions:
-        if tran.get("currency_name") == currency_name:
+        if tran.get("operationAmount", {}).get("currency", {}).get("code") == currency_name:
             yield tran
 
 
@@ -12,8 +9,9 @@ def transaction_descriptions(transactions):
         yield tran.get("description")
 
 
-def card_number_generator(start=1, finish=9999):
-    while True:
-        # Генерация 16 случайных цифр
-        card_number = " ".join(f"{random.randint(start, finish):04d}" for _ in range(4))
-        yield card_number
+def card_number_generator(start, finish):
+
+    for num in range(start, finish + 1):
+        str_num = str(num)
+        ful_num = str_num.zfill(16)
+        yield f"{ful_num[:4]} {ful_num[4:8]} {ful_num[8:12]} {ful_num[12:16]}"
