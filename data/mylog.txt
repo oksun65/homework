@@ -1,0 +1,7 @@
+func is ok.
+func is ok.
+func is ok.
+func is ok.
+func is ok.
+func is ok.
+func error: ZeroDivisionError: division by zero. Input: (0,), {}.
