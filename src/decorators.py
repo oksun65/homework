@@ -35,4 +35,3 @@ def log(filename=None, directory="data"):
         return inner
 
     return wrapper
-

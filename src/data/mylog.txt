@@ -1,1 +1,0 @@
-func error: ZeroDivisionError: division by zero. Input: (0,), {}.

@@ -1,9 +1,0 @@
-func is ok.
-func error: ZeroDivisionError: division by zero. Input: (0,), {}.
-func error: ZeroDivisionError: division by zero. Input: (0,), {}.
-func error: ZeroDivisionError: division by zero. Input: (0,), {}.
-func error: ZeroDivisionError: division by zero. Input: (0,), {}.
-func error: ZeroDivisionError: division by zero. Input: (0,), {}.
-func error: ZeroDivisionError: division by zero. Input: (0,), {}.
-func error: ZeroDivisionError: division by zero. Input: (0,), {}.
-func error: ZeroDivisionError: division by zero. Input: (0,), {}.
