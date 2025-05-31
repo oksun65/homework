@@ -1,3 +1,9 @@
+import logging
+
+from logger import setup_logging
+
+
+
 def get_mask_card_number(my_card_number: str) -> str:
     """Функция, которая принимает на вход номер карты и возвращает маску номера"""
     # card_number = input("Введите номер карты: ").replace(" ", "")
