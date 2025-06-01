@@ -2,7 +2,7 @@ import json
 import os
 import sys
 from typing import Any
-from utils import read_json_file
+from src.utils import read_json_file
 
 import requests
 from dotenv import load_dotenv

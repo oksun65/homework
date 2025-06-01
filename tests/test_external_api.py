@@ -21,7 +21,7 @@ data = [
 ]
 
 
-@patch("request.request")
+@patch("requests.request")
 def test_external_api(mock_request):
     mock_request.return_value.status_code = 200
     mock_request.return_value.json.return_value = {"result": 10000.00}
