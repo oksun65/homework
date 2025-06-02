@@ -1,5 +1,6 @@
 from src.masks import get_mask_account, get_mask_card_number
 
+
 def mask_card_account(my_info: str) -> str:
     """Функция, для вывода маски номера счета или номера карты"""
     if "Счет" in my_info:

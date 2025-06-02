@@ -2,12 +2,11 @@ import json
 import os
 import sys
 from typing import Any
-from src.utils import read_json_file
 
 import requests
 from dotenv import load_dotenv
 
-sys.path.append(os.path.join(os.path.dirname(__file__), 'src'))
+sys.path.append(os.path.join(os.path.dirname(__file__), "src"))
 
 load_dotenv(".env")
 
@@ -48,10 +47,4 @@ def convert_to_rub(transactions: list[dict[Any:Any]], code: str) -> Any:
 
     except Exception as e:
         print(Exception("Error"))
-        raise Exception
-
-if __name__=="__main__":
-    data = read_json_file('data/operations.json')
-
-    result=convert_to_rub(data, 'RUB')
-    print(result)
+        raise e
